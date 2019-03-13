@@ -22,6 +22,7 @@ train <- read.csv('C:/Data Science/Kaggle/House price/train.csv', na.strings = c
 test <- read.csv('C:/Data Science/Kaggle/House price/test.csv', na.strings = c("", "NA"), stringsAsFactors = T)
 ``` 
 #### Data cleaning
+I will clean my data to make it clean and tidy to be easier to use for my modeling.
 ```
 Saleprice<-train$SalePrice
 train$SalePrice<-NULL
@@ -65,6 +66,7 @@ total$MoSold <- as.factor(total$MoSold)
 # total$YrSold <- as.factor(total$YrSold)
 ```
 ## Prediction
+I wil be spliting my train data and trial the model out to see how accurate my model is.
 ```
 #split into train and test
 train<- total[1:nrow(train),]
@@ -170,3 +172,4 @@ submit<-data.frame(Id=1461:2919,SalePrice=prediction)
 write.csv(submit,'C:/Data Science/Kaggle/House price/submit.csv',row.names = F)
 ```
 ## Conclusion
+This was an analysis of what the house prices would be as in estimation in the features we have given. 
