@@ -1,5 +1,5 @@
 # **House Prices**
-*Predict House Prices in IOWA*
+*Predict House Prices*
 
 ## Table of contents
 
