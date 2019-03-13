@@ -21,7 +21,7 @@ library(rpart.plot)
 train <- read.csv('C:/Data Science/Kaggle/House price/train.csv', na.strings = c("", "NA"), stringsAsFactors =T)
 test <- read.csv('C:/Data Science/Kaggle/House price/test.csv', na.strings = c("", "NA"), stringsAsFactors = T)
 ``` 
-####Data cleaning
+#### Data cleaning
 ```
 Saleprice<-train$SalePrice
 train$SalePrice<-NULL
@@ -64,7 +64,7 @@ total$Id<-NULL
 total$MoSold <- as.factor(total$MoSold)
 # total$YrSold <- as.factor(total$YrSold)
 ```
-##Prediction
+## Prediction
 ```
 #split into train and test
 train<- total[1:nrow(train),]
@@ -169,4 +169,4 @@ prediction<-predictions(predict(model,test))
 submit<-data.frame(Id=1461:2919,SalePrice=prediction)
 write.csv(submit,'C:/Data Science/Kaggle/House price/submit.csv',row.names = F)
 ```
-##Conclusion
+## Conclusion
